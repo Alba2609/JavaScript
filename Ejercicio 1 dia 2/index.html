@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Evento onMouseOver</title>
+    </head>
+     <body bgcolor="#ffffff">
+         <h1>Evento onmouseover</h1>
+         <script language="JavaScript">
+             function cambiaColor (code){ // Funcion para cambio de color 
+              document.bgColor = code
+             }
+
+         </script>
+         <a onmouseover="cambiaColor('ff0000')">ROJO</a><br><br> <!--Llamada a la funcion-->
+         <a onmouseover="cambiaColor('33FF49')">VERDE</a><br><br>
+         <a onmouseover="cambiaColor('335EFF')">AZUL</a><br><br>
+         <a onmouseover="cambiaColor('FEFEFE')">BLANCO</a>
+     </body>
+</html>
