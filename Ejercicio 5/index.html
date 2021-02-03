@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Entrada y salida de la pagina</title>
+<script type="text/javascript">
+  window.onbeforeunload = preguntarAntesDeSalir;
+
+function preguntarAntesDeSalir(){
+return "¿Seguro que quieres salir?";
+}
+</script> 
+
+</head>
+
+<body onLoad="alert('Bienvenido a nuestra WEB')">
+ <h1>Mensaje de alerta al entrar y salir de la pagina</h1>
+ <button onclick="window.close();">Cerrar esta ventana" </button> 
+</body>
+
+</html>

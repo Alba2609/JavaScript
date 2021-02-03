@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Alertas</title>
+<script type="text/javascript">
+function ConfirmDemo() { // funcion 
+//Ingresamos un mensaje a mostrar
+var mensaje = confirm("¿Te gusta el cafe por la mañana?");
+//Detectamos si el usuario acepto el mensaje
+if (mensaje) {
+alert("¡Gracias por aceptar!"); //si confirma
+}
+//Detectamos si el usuario denegó el mensaje
+else {
+alert("¡Has denegado el mensaje!"); //se deniega
+}
+}
+</script> 
+
+</head>
+
+<body>
+
+<form>
+<h3>Tenemos una pregunta para ti</h3>
+<input type="button" onclick="ConfirmDemo()" value="Click para ver la pregunta" /> <!--botton para activar la función-->
+</form>
+
+</body>
+
+</html>

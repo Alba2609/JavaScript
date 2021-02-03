@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Hola a todos</title> 
+<script type="text/javascript" >
+var txt="   TEXTO EN MOVIMIENTO ,  ";
+var espera=200;
+var refresco=null;
+function rotulo_title() {
+        document.title=txt;
+        txt=txt.substring(1,txt.length)+txt.charAt(0);
+        refresco=setTimeout("rotulo_title()",espera);}
+rotulo_title();
+</script>
+
+</script> 
+
+</head>
+
+<body>
+ <h1>Texto en movimineto</h1>
+ <P>En la pestaña de información</P>
+</body>
+
+</html>

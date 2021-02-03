@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang= "es"> <!--idioma de la pagina-->
+    <head> <!--Es la 'cabeza'de la web. NO ES PARTE VISIBLE DE LA WEB-->
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width= device-width, user-scalable =no, initial-scale =1.0, maximum-scale= 1.0, minimum-scale=1.0">
+        <link  rel = " stylesheet " href = " estilos.css " >
+	    <title> Lista de Tareas </title>
+       
+    </head>
+    <body> <!--Cuerpo de la pagina (lo que se ve)-->
+        <div class="principal">
+            <div class="wrap">
+                <form class="formulario" action="">
+                    <input type="text" id="tareaInput" placeholder="Agrega tu tarea"> <!--donde introduce el usuario las tareas-->
+                    <input type="button" class="boton" id="btn-agregar" value="Agregar Tarea"><!--boton de agregar-->
+                </form>
+            </div>
+        </div>
+    
+        <div class="tareas">
+            <div class="wrap">
+                <ul class="lista" id="lista"></ul>
+            </div>
+            <script type="text/javascript" src="pagina1.js"></script>
+             
+    </body>
+</html>
