@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<title>Conversor monetario</title>
+<head>
+     <meta charset="utf-8">
+     <h1>Conversor monetario :</h1>
+     <script type="text/javascript">
+         function convertir_a_dollares(euro) //Funcion para cambiar de euro a dollar
+         {
+         numero = /[0-9\.]$/ // variable numero
+
+         if (!numero.exec(euro))  // Condicion 
+         {
+             alert("Esto no es un número"); //sentencia
+         }
+         else
+         {
+             dollar = parseFloat(1.3086); // variable valor del dollar frente al del euro
+             resultado = dollar*parseFloat(euro); // variable para obtener el resultado
+             document.getElementById("total").innerHTML = euro + " euros son... " + resultado.toFixed(2) + " dollares"; // mostrar en pantalla en resultado
+         }
+         }
+
+         function convertir_a_euros(dollar) // Funcion para cambiar de dollar a euro
+         {
+         numero = /[0-9\.]$/  // variable numero
+
+         if (!numero.exec(dollar)) // condicion 
+         {
+             alert("Esto no es un número"); // sentencia
+         }
+         {
+         euro = parseFloat(0.7641); // variable valor del euro frente al del dollar
+         resultado = euro*parseFloat(dollar); // variable para obtener el resultado
+         document.getElementById("total").innerHTML = dollar + " dollares son ... " + resultado.toFixed(2) + " euros"; // mostrar en pantalla el resultado
+         }
+         }
+     </script>
+</head>
+<body>
+     <input type="text" id="dollar" maxlength="30"> <!-- cajon donde ingresar la informacion-->
+     <input type="button" value="Convertir de Euro a Dollar" onclick="convertir_a_dollares(document.getElementById('dollar').value)"><!--boton que llama a la funcion convertir_a_dollares-->
+     <br>
+     <br>
+     <input type="text" id="euros" maxlength="30"><!-- cajon para ingresar la informacion-->
+     <input type="button" value="Convertir de Dollar a Euro" onclick="convertir_a_euros(document.getElementById('euros').value)"><!--boton que llama a la funcion convertir_a_euros-->
+     <br>
+     <br>
+     <div id="total"></div>
+</body>
+</html>
