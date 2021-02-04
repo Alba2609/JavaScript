@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta  charset=utf-8>
+        <title>Objeto Password</title>
+        </head>
+        
+        <body>
+        <h1>Objeto Password</h1>
+        <script language="JavaScript"> 
+              function informar (){
+                  var mensaje = "Usuario no autorizado"; // variable de mensaje si se intruducen datos incorrectos
+                  var usuarios = new Array(3); // variable que contiene un Array con los usuarios
+                  var contraseña = new Array(3); // variable que contiene un Array con las contraseñas
+
+                  usuarios[0]="PEDRO";
+                  usuarios[1]= "ANA"; //contenido del array usuarios
+                  usuarios[2]= "ALBA";
+
+                  contraseña[0]="1664";
+                  contraseña[1]="2617"; // contenido del array contraseñas
+                  contraseña[2]="2609";
+                
+                  for (i=0; i<usuarios.length; i++){  // bucle for para verificar que los datos introducidos son correctos
+                      if((usuarios[i]== document.miFormulario.usuario.value.toUpperCase()) 
+                      && (contraseña[i]==document.miFormulario.password.value)){
+                          mensaje="Bienvenido!!!!";
+                          break;
+                      }
+                  }
+
+                  alert(mensaje);
+                  document.miFormulario.botonLimpiar.click(); // mensaje de alerta de ususario o contraseña incorrectos
+                  document.miFormulario.usuario.focus();
+              }
+        </script> 
+        <form name="miFormulario" action="javascript:informar()">  <!--formulario de informacion de ususario y contraseña-->
+            "Introduzca usuario y contraseña"
+            <br>
+            <br>
+            <table cellpadding="5">
+                <tbody>
+                    <tr align="right">
+                        <td>Usuario:</td>
+                        <td>
+                            <input type="text" name="usuario" size="15"> <!--introducir el usuario-->
+                        </td>
+                    </tr>
+                    <tr align="right">
+                        <td>Contraseña</td>
+                        <td>
+                            <input type="password" name="password" size="15"> <!--introducir la contraseña-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" name="botonEnviar" value="enviar"> <!--boton de enviar-->
+            <input type="reset" name="botonLimpiar" value="limpiar"> <!--boton de limpiar-->
+        </form> 
+        </body>
+</html>
